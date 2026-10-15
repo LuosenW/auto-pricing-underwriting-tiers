@@ -4,6 +4,7 @@ the GLM and the rating plan all group the rating variables the same way.
 """
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 CLEAN = Path("data") / "clean"
@@ -45,6 +46,27 @@ def add_bands(df):
     for band_col, (source, edges, labels) in BANDS.items():
         df[band_col] = pd.cut(df[source], bins=edges, labels=labels, right=True).astype(str)
     return df
+
+
+PLAN_VARIABLES = ["drv_age_band", "bm_band", "veh_age_band", "veh_power_band",
+                  "density_band", "VehGas", "VehBrand", "Region"]
+
+
+def rebalance(pred, train_mask, df):
+    """Scale a prediction so it reproduces actual training losses (capped x large loss loading)."""
+    target = df.loc[train_mask, "claim_amount_capped"].sum() * LARGE_LOSS_LOADING
+    return pred * target / (pred[train_mask] * df.loc[train_mask, "exposure"]).sum()
+
+
+def one_way_plan(df, train_mask):
+    """The 'current' plan: base rate x one-way relativities, rebalanced to training losses."""
+    ow = pd.read_csv(TABLES / "one_way.csv", dtype={"level": str})
+    labels = {col: label for label, col in RATING_VARIABLES.items()}
+    pred = np.ones(len(df))
+    for v in PLAN_VARIABLES:
+        lookup = ow[ow["variable"] == labels[v]].set_index("level")["pp_relativity"]
+        pred = pred * df[v].astype(str).map(lookup).to_numpy()
+    return rebalance(pred, train_mask, df)
 
 
 def load_policies():

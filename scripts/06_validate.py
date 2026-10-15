@@ -20,28 +20,11 @@ import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.linear_model import TweedieRegressor
 
-from common import BANDS, CHARTS, CLEAN, LARGE_LOSS_LOADING, RATING_VARIABLES, TABLES, load_policies
+from common import (BANDS, CHARTS, CLEAN, LARGE_LOSS_LOADING, PLAN_VARIABLES, RATING_VARIABLES, TABLES,
+                    load_policies, one_way_plan, rebalance)
 
 NAVY, ORANGE, GREY, GRID, INK, MUTED = "#1f4e79", "#e08a3c", "#9aa5b1", "#e6e6e6", "#222222", "#6b6b6b"
-PLAN_VARIABLES = ["drv_age_band", "bm_band", "veh_age_band", "veh_power_band",
-                  "density_band", "VehGas", "VehBrand", "Region"]
 RAW_FEATURES = ["DrivAge", "BonusMalus", "VehAge", "VehPower", "Density", "VehGas", "VehBrand", "Region", "Area"]
-
-
-def rebalance(pred, train_mask, df):
-    """Scale a prediction so it reproduces actual training losses, like the GLM plan's base rate."""
-    target = (df.loc[train_mask, "claim_amount_capped"].sum() * LARGE_LOSS_LOADING)
-    return pred * target / (pred[train_mask] * df.loc[train_mask, "exposure"]).sum()
-
-
-def one_way_plan(df, train_mask):
-    ow = pd.read_csv(TABLES / "one_way.csv", dtype={"level": str})
-    labels = {col: label for label, col in RATING_VARIABLES.items()}
-    pred = np.ones(len(df))
-    for v in PLAN_VARIABLES:
-        lookup = ow[ow["variable"] == labels[v]].set_index("level")["pp_relativity"]
-        pred = pred * df[v].astype(str).map(lookup).to_numpy()
-    return rebalance(pred, train_mask, df)
 
 
 def tweedie_glm(df, train_mask):

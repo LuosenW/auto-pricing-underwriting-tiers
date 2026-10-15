@@ -1,0 +1,13 @@
+item,value
+Policies,590983
+"Total premium, current plan",50260385.0
+"Total premium, GLM plan",50260385.0
+Policies with a decrease,0.2849
+Policies with an increase,0.7151
+Policies changing more than 15% either way,0.7551
+Median change,0.2165
+Largest decrease,-0.7811
+Largest increase,3.0563
+Capping: policies held at the cap,0.7696
+Capping: factor applied to GLM rates within the cap,1.023
+"Total premium, capped plan",50260385.0
