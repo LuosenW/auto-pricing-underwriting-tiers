@@ -1,0 +1,68 @@
+level,label,variable,exposure_share,frequency,severity,relativity
+18-20,Driver age,drv_age_band,0.0068,1.1226,1.8422,2.068
+21-25,Driver age,drv_age_band,0.0365,0.748,1.2249,0.916
+26-30,Driver age,drv_age_band,0.0778,0.5759,1.2367,0.712
+31-40,Driver age,drv_age_band,0.2339,0.7028,1.161,0.816
+41-50,Driver age,drv_age_band,0.2469,1.0,1.0,1.0
+51-60,Driver age,drv_age_band,0.215,0.9595,1.0983,1.054
+61-70,Driver age,drv_age_band,0.1076,0.8967,1.1357,1.018
+71+,Driver age,drv_age_band,0.0755,0.9604,1.1396,1.094
+50,Bonus malus,bm_band,0.6287,1.0,1.0,1.0
+51-60,Bonus malus,bm_band,0.1338,1.5958,1.0,1.596
+61-80,Bonus malus,bm_band,0.1469,2.4312,1.0,2.431
+81-99,Bonus malus,bm_band,0.0629,2.7032,1.0,2.703
+100-125,Bonus malus,bm_band,0.0268,5.5166,1.0,5.517
+126+,Bonus malus,bm_band,0.0009,9.2488,1.0,9.249
+0,Vehicle age,veh_age_band,0.0468,0.9465,1.0,0.946
+1-2,Vehicle age,veh_age_band,0.181,1.0245,1.0,1.024
+3-5,Vehicle age,veh_age_band,0.2023,1.015,1.0,1.015
+6-10,Vehicle age,veh_age_band,0.2695,1.0,1.0,1.0
+11-15,Vehicle age,veh_age_band,0.2136,0.9043,1.0,0.904
+16+,Vehicle age,veh_age_band,0.0868,0.7033,1.0,0.703
+4,Vehicle power,veh_power_band,0.1673,0.924,1.0,0.924
+5,Vehicle power,veh_power_band,0.1886,0.9858,1.0,0.986
+6,Vehicle power,veh_power_band,0.2266,1.0,1.0,1.0
+7,Vehicle power,veh_power_band,0.2164,1.008,1.0,1.008
+8,Vehicle power,veh_power_band,0.0657,1.0738,1.0,1.074
+9-10,Vehicle power,veh_power_band,0.0867,1.1381,1.0,1.138
+11+,Vehicle power,veh_power_band,0.0486,1.2681,1.0,1.268
+1-50,Density,density_band,0.1737,0.8176,1.0,0.818
+51-200,Density,density_band,0.2367,0.9083,1.0,0.908
+"201-1,000",Density,density_band,0.2698,1.0,1.0,1.0
+"1,001-5,000",Density,density_band,0.2551,1.1498,1.0,1.15
+"5,001+",Density,density_band,0.0647,1.1898,1.0,1.19
+Diesel,Fuel,VehGas,0.4823,1.1541,1.0,1.154
+Regular,Fuel,VehGas,0.5177,1.0,1.0,1.0
+B14,Vehicle brand,VehBrand,0.006,0.7582,1.0,0.758
+B12,Vehicle brand,VehBrand,0.2031,0.785,1.0,0.785
+B6,Vehicle brand,VehBrand,0.0424,0.9689,1.0,0.969
+B10,Vehicle brand,VehBrand,0.027,0.9942,1.0,0.994
+B1,Vehicle brand,VehBrand,0.257,1.0,1.0,1.0
+B2,Vehicle brand,VehBrand,0.2569,1.0034,1.0,1.003
+B4,Vehicle brand,VehBrand,0.0374,1.0087,1.0,1.009
+B3,Vehicle brand,VehBrand,0.0786,1.0644,1.0,1.064
+B13,Vehicle brand,VehBrand,0.0186,1.0751,1.0,1.075
+B5,Vehicle brand,VehBrand,0.0533,1.0828,1.0,1.083
+B11,Vehicle brand,VehBrand,0.0196,1.1461,1.0,1.146
+R73,Region,Region,0.0218,0.7934,1.0,0.793
+R43,Region,Region,0.0017,0.8886,1.0,0.889
+R41,Region,Region,0.0217,0.9047,1.0,0.905
+R42,Region,Region,0.0033,0.9222,1.0,0.922
+R25,Region,Region,0.0179,0.9627,1.0,0.963
+R21,Region,Region,0.0036,0.9908,1.0,0.991
+R24,Region,Region,0.2737,1.0,1.0,1.0
+R23,Region,Region,0.0094,1.0003,1.0,1.0
+R11,Region,Region,0.0898,1.0114,1.0,1.011
+R83,Region,Region,0.007,1.011,1.0,1.011
+R53,Region,Region,0.0732,1.0328,1.0,1.033
+R52,Region,Region,0.0584,1.035,1.0,1.035
+R31,Region,Region,0.0337,1.0502,1.0,1.05
+R54,Region,Region,0.0298,1.0552,1.0,1.055
+R91,Region,Region,0.0452,1.058,1.0,1.058
+R72,Region,Region,0.0416,1.0598,1.0,1.06
+R26,Region,Region,0.0144,1.0669,1.0,1.067
+R94,Region,Region,0.0056,1.0788,1.0,1.079
+R22,Region,Region,0.0103,1.0899,1.0,1.09
+R93,Region,Region,0.1069,1.1307,1.0,1.131
+R82,Region,Region,0.1245,1.2034,1.0,1.203
+R74,Region,Region,0.0065,1.3092,1.0,1.309
