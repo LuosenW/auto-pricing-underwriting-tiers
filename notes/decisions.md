@@ -65,3 +65,10 @@
 - Why so many increases: the one-way plan multiplies 8 relativities that overlap (young drivers also have high bonus malus, dense areas also have certain regions and brands), so it badly overcharges a minority of high risk policies and, to collect the same total, undercharges the safe majority. The GLM undoes this: drivers 18 to 20 average -56%, bonus malus 126+ -52%, bonus malus 100-125 -41%; drivers 71+ +63%, 61-70 +47%, bonus malus 50 (57% of policies) +34%. The one-way plan's double lift result (actual / premium from 0.49 to 2.28) is the same problem seen from the loss side.
 - Capping: changes limited to plus or minus 15% this renewal, with the GLM rates inside the cap scaled by 1.023 so the capped plan still collects the same total. 77% of policies sit at the cap; 69% get an increase of 5% to 15% and 23% a decrease of 5% to 15%. With a 15% cap each year, the median policy (+22%) reaches the GLM rate at the second renewal.
 - Fix along the way: policies capped at exactly -15% were first counted in the "Down 15-25%" band (pd.cut includes the right edge). Changes are nudged a hair toward zero before banding so capped policies land in the 5-15% bands.
+
+## Underwriting tiers (08_tiers.py)
+- Tiers are set by GLM predicted cost relative to the book average pure premium (164.54 per policy year): Preferred under 0.75, Standard 0.75 to 1.25, Surcharge 1.25 to 2, Refer 2 to 4, Decline 4 and over. Cutoffs are judgment calls: they give a large Preferred tier (42% of policies) and a Decline tier near 1% (1.4%).
+- Premium assumes a 70% target loss ratio (premium = pure premium / 0.70). Loss ratios are measured on the test sample with capped claims x large loss loading.
+- Result: under one flat rate, tier loss ratios run from 37% (Preferred) to 359% (Decline); under the GLM plan they run from 62% to 94%, with the overall test loss ratio at 72.5% under both.
+- The Refer tier's 94% under the GLM plan rests on 582 claims; with a severity dispersion near 8 that is within noise, so no change to the plan, but it is flagged in the underwriting guidelines.
+- Guidelines memo: notes/underwriting_guidelines.md.

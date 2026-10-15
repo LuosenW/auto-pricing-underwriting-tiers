@@ -1,0 +1,6 @@
+tier,avg_driver_age,share_age_25_or_under,avg_bonus_malus,share_bonus_malus_50,share_bonus_malus_100_plus,share_density_over_5000,share_vehicle_power_11_plus
+1 Preferred,50.06,0.0019,50.4355,0.9391,0.0,0.0378,0.0325
+2 Standard,45.9772,0.0183,56.5893,0.5184,0.0,0.0871,0.0813
+3 Surcharge,38.3812,0.128,73.6564,0.0086,0.007,0.1133,0.0534
+4 Refer,38.3526,0.2564,89.2701,0.0002,0.4153,0.1543,0.0698
+5 Decline,29.5776,0.6463,104.8647,0.0,0.8992,0.1271,0.0478
