@@ -28,3 +28,10 @@
 - Final data: 590,983 policies, 305,463 policy years, 21,878 claims, 49,669,589 of claim amounts. Raw claim amounts minus kept minus dropped = 0.00.
 - Large claims: each claim is capped at 100,000 for the severity model (34 claims, 0.16% of claims). Capped losses are 82.1% of total losses, so a flat large loss loading of 1.2182 (total / capped) is applied to modeled premiums. Thresholds compared: 50,000 keeps 77.5% of losses, 100,000 keeps 82.1%, 200,000 keeps 87.1%; 100,000 was chosen as a round figure between the 99.9th percentile (181,308) and the point where the severity model would be driven by a handful of claims.
 - Train and test split: 80% / 20% by policy, random seed 42. Train: 472,625 policies, claim frequency 0.0715. Test: 118,358 policies, frequency 0.0722.
+
+## One-way analysis (03_one_way.py)
+- Run on the training sample only (472,625 policies), so the test sample stays untouched for validating the models.
+- Bands are defined once in scripts/common.py and reused by every later step: driver age (8 bands), bonus malus (6), vehicle age (6), vehicle power (7), density (5). Area, fuel, brand and region are used as coded.
+- Book average (capped): frequency 0.0715 claims per policy year, severity 1,844, pure premium 131.80 per policy year.
+- Thin cells to watch: bonus malus 126+ (0.1% of exposure, relativity 10.3), driver age 18 to 20 (0.7%, relativity 5.3), several regions under 1% of exposure. One-way relativities on cells this small are noisy; the GLM and later grouping decide how much of them to trust.
+- One-way results overlap: area and density measure nearly the same thing, and young drivers also tend to have high bonus malus levels. A one-way view counts that overlap twice; the GLM separates it.
