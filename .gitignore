@@ -5,3 +5,7 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .vscode/
+
+# Tableau temp files and the duplicate copy made by "Save As"
+~*.twbr
+dashboard/Auto Pricing GLM and Underwriting Tiers.twbx
