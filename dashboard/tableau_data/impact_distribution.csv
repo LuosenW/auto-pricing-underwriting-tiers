@@ -1,0 +1,15 @@
+change_band,band_order,scenario,share_of_policies
+Down 25%+,0,Full GLM change,0.1218
+Down 15-25%,1,Full GLM change,0.0588
+Down 5-15%,2,Full GLM change,0.0685
+Within 5%,3,Full GLM change,0.0783
+Up 5-15%,4,Full GLM change,0.0981
+Up 15-25%,5,Full GLM change,0.1114
+Up 25%+,6,Full GLM change,0.4631
+Down 25%+,0,Capped at 15%,0.0
+Down 15-25%,1,Capped at 15%,0.0
+Down 5-15%,2,Capped at 15%,0.2335
+Within 5%,3,Capped at 15%,0.0729
+Up 5-15%,4,Capped at 15%,0.6936
+Up 15-25%,5,Capped at 15%,0.0
+Up 25%+,6,Capped at 15%,0.0

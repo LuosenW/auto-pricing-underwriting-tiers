@@ -1,0 +1,5 @@
+model,gini_test,actual_over_expected_test
+One-way plan,0.2971,1.0581
+GLM rating plan,0.3397,1.0363
+Tweedie GLM,0.3477,1.0619
+Boosted trees,0.3213,1.066

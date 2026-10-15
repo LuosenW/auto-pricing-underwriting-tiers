@@ -72,3 +72,8 @@
 - Result: under one flat rate, tier loss ratios run from 37% (Preferred) to 359% (Decline); under the GLM plan they run from 62% to 94%, with the overall test loss ratio at 72.5% under both.
 - The Refer tier's 94% under the GLM plan rests on 582 claims; with a severity dispersion near 8 that is within noise, so no change to the plan, but it is flagged in the underwriting guidelines.
 - Guidelines memo: notes/underwriting_guidelines.md.
+
+## Tableau export (09_export_tableau.py)
+- Results are reshaped into 5 CSVs in dashboard/tableau_data/ (committed, small): segments.csv, tiers.csv, impact_distribution.csv, model_comparison.csv, lift_chart.csv.
+- segments.csv holds one row for each of the 67 rating variable levels, with the GLM and one-way relativities, claim count actual versus expected (test sample) and average premium change. Keeping them in one file lets a single Variable filter drive every segment chart without Tableau data blending.
+- Each file has an order column (level_order, tier_order, band_order) so Tableau shows bands in their natural order. Brands and regions are ordered by GLM relativity.
