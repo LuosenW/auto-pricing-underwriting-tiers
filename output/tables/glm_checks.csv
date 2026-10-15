@@ -1,0 +1,13 @@
+sample,check,value
+train,Actual claims,17474
+train,Predicted claims,17474.0
+train,Predicted / actual claims,1.0
+train,Actual losses (uncapped),40209867.0
+train,Predicted losses,39250534.0
+train,Predicted / actual losses,0.9761
+test,Actual claims,4404
+test,Predicted claims,4361.6
+test,Predicted / actual claims,0.9904
+test,Actual losses (uncapped),9459722.0
+test,Predicted losses,9812448.0
+test,Predicted / actual losses,1.0373
