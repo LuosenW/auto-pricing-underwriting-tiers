@@ -1,0 +1,25 @@
+check,value
+Raw policies,678013
+Raw claim amount rows,26639
+Raw claim amount total,60697930.68
+Raw exposure,358499.4
+Dropped: claim rows with no matching policy,195
+Dropped: claim amount with no matching policy,788714.18
+"Dropped: policies in ID block <= 1,000,000",87030
+Dropped: exposure in ID block,52897.4
+Dropped: claim rows in ID block,4566
+Dropped: claim amount in ID block,10239627.34
+Policies with exposure capped at 1,1224
+"Claims above the 100,000 cap",34
+Large loss loading (total / capped losses),1.2182
+Policies whose claim count was reset to claims with amounts,18
+Final policies,590983
+Final exposure,305462.7
+Final claims,21878
+Final claim amount,49669589.16
+Claim amount check: raw minus kept minus dropped,0.0
+Policies with claims but no amount (should be 0),0
+Train policies,472625
+Train claim frequency (claims per policy year),0.0715
+Test policies,118358
+Test claim frequency (claims per policy year),0.0722

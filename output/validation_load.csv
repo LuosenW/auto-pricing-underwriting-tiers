@@ -1,0 +1,14 @@
+check,value
+Policies (freq rows),678013
+Unique policy IDs in freq,678013
+Claim rows (sev rows),26639
+Policies with at least one claim amount,24950
+Total claim count in freq (ClaimNb),36102
+Total claim amount in sev,60697930.68
+Total exposure (policy years),358499.4
+Policies with exposure above 1 year,1224
+Policies with ClaimNb > 0 but no claim amount,9116
+Claim rows whose policy is not in freq,195
+Claim amounts of 0 or less,0
+Missing values in freq,0
+Missing values in sev,0

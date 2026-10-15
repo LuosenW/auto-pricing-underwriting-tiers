@@ -1,0 +1,7 @@
+# raw data and Python environment stay off GitHub
+data/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
